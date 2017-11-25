@@ -1,0 +1,113 @@
+1:C 24 Nov 00:17:06.443 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 24 Nov 00:17:06.444 # Redis version=4.0.1, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 24 Nov 00:17:06.444 # Configuration loaded
+1:M 24 Nov 00:17:06.447 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1:M 24 Nov 00:17:06.447 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1:M 24 Nov 00:17:06.447 # Current maximum open files is 4096. maxclients has been reduced to 4064 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1:M 24 Nov 00:17:06.447 * No cluster configuration found, I'm dd0bfaaebb0a312a41cc2bbcd7aa44f82cade7a4
+1:M 24 Nov 00:17:06.460 * Running mode=cluster, port=6379.
+1:M 24 Nov 00:17:06.460 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1:M 24 Nov 00:17:06.460 # Server initialized
+1:M 24 Nov 00:17:06.460 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1:M 24 Nov 00:17:06.460 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1:M 24 Nov 00:17:06.460 * Ready to accept connections
+1:M 24 Nov 02:01:15.251 # configEpoch set to 5 via CLUSTER SET-CONFIG-EPOCH
+1:M 24 Nov 02:01:15.494 # IP address for this node updated to 172.17.0.5
+1:S 24 Nov 02:01:19.478 * Before turning into a slave, using my master parameters to synthesize a cached master: I may be able to synchronize with the new master with just a partial transfer.
+1:S 24 Nov 02:01:19.478 # Cluster state changed: ok
+1:S 24 Nov 02:01:20.208 * Connecting to MASTER 172.17.0.2:6379
+1:S 24 Nov 02:01:20.208 * MASTER <-> SLAVE sync started
+1:S 24 Nov 02:01:20.208 * Non blocking connect for SYNC fired the event.
+1:S 24 Nov 02:01:20.209 * Master replied to PING, replication can continue...
+1:S 24 Nov 02:01:20.209 * Trying a partial resynchronization (request 0e36ba088fd93f9c37dc268e4ef52a3125e4a9e1:1).
+1:S 24 Nov 02:01:20.214 * Full resync from master: 6479eb0ccc9d717698ffc896c379c1060b8654a1:0
+1:S 24 Nov 02:01:20.214 * Discarding previously cached master state.
+1:S 24 Nov 02:01:20.297 * MASTER <-> SLAVE sync: receiving 175 bytes from master
+1:S 24 Nov 02:01:20.298 * MASTER <-> SLAVE sync: Flushing old data
+1:S 24 Nov 02:01:20.299 * MASTER <-> SLAVE sync: Loading DB in memory
+1:S 24 Nov 02:01:20.303 * MASTER <-> SLAVE sync: Finished with success
+1:S 24 Nov 02:01:20.324 * Background append only file rewriting started by pid 9
+1:S 24 Nov 02:01:20.385 * AOF rewrite child asks to stop sending diffs.
+9:C 24 Nov 02:01:20.385 * Parent agreed to stop sending diffs. Finalizing AOF...
+9:C 24 Nov 02:01:20.385 * Concatenating 0.00 MB of AOF diff received from parent.
+9:C 24 Nov 02:01:20.385 * SYNC append only file rewrite performed
+9:C 24 Nov 02:01:20.387 * AOF rewrite: 6 MB of memory used by copy-on-write
+1:S 24 Nov 02:01:20.440 * Background AOF rewrite terminated with success
+1:S 24 Nov 02:01:20.440 * Residual parent diff successfully flushed to the rewritten AOF (0.00 MB)
+1:S 24 Nov 02:01:20.440 * Background AOF rewrite finished successfully
+1:S 24 Nov 02:06:08.746 * 1 changes in 900 seconds. Saving...
+1:S 24 Nov 02:06:08.754 * Background saving started by pid 10
+10:C 24 Nov 02:06:08.768 * DB saved on disk
+10:C 24 Nov 02:06:08.769 * RDB: 4 MB of memory used by copy-on-write
+1:S 24 Nov 02:06:08.855 * Background saving terminated with success
+1:signal-handler (1511560167) Received SIGTERM scheduling shutdown...
+1:S 24 Nov 21:49:27.544 # User requested shutdown...
+1:S 24 Nov 21:49:27.824 * Calling fsync() on the AOF file.
+1:S 24 Nov 21:49:27.824 * Saving the final RDB snapshot before exiting.
+1:S 24 Nov 21:49:27.965 * DB saved on disk
+1:S 24 Nov 21:49:27.965 * Removing the pid file.
+1:S 24 Nov 21:49:27.965 # Redis is now ready to exit, bye bye...
+1:C 24 Nov 21:49:29.778 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 24 Nov 21:49:29.844 # Redis version=4.0.1, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 24 Nov 21:49:29.844 # Configuration loaded
+1:M 24 Nov 21:49:29.847 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1:M 24 Nov 21:49:29.847 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1:M 24 Nov 21:49:29.847 # Current maximum open files is 4096. maxclients has been reduced to 4064 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1:M 24 Nov 21:49:29.885 * Node configuration loaded, I'm dd0bfaaebb0a312a41cc2bbcd7aa44f82cade7a4
+1:M 24 Nov 21:49:29.896 * Running mode=cluster, port=6379.
+1:M 24 Nov 21:49:29.896 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1:M 24 Nov 21:49:29.896 # Server initialized
+1:M 24 Nov 21:49:29.896 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1:M 24 Nov 21:49:29.905 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1:M 24 Nov 21:49:29.905 * DB loaded from append only file: 0.000 seconds
+1:M 24 Nov 21:49:29.906 * Ready to accept connections
+1:S 24 Nov 21:49:29.906 * Before turning into a slave, using my master parameters to synthesize a cached master: I may be able to synchronize with the new master with just a partial transfer.
+1:S 24 Nov 21:49:29.906 # Cluster state changed: ok
+1:S 24 Nov 21:49:30.911 * Connecting to MASTER 172.17.0.2:6379
+1:S 24 Nov 21:49:30.912 * MASTER <-> SLAVE sync started
+1:S 24 Nov 21:49:30.912 * Non blocking connect for SYNC fired the event.
+1:S 24 Nov 21:49:30.912 * Master replied to PING, replication can continue...
+1:S 24 Nov 21:49:30.912 * Trying a partial resynchronization (request f4bba3595d9f56b4c5f9d4579c2233d941a1f213:1).
+1:S 24 Nov 21:49:31.014 * Full resync from master: 6479eb0ccc9d717698ffc896c379c1060b8654a1:98410
+1:S 24 Nov 21:49:31.014 * Discarding previously cached master state.
+1:S 24 Nov 21:49:31.223 * MASTER <-> SLAVE sync: receiving 198 bytes from master
+1:S 24 Nov 21:49:31.224 * MASTER <-> SLAVE sync: Flushing old data
+1:S 24 Nov 21:49:31.224 * MASTER <-> SLAVE sync: Loading DB in memory
+1:S 24 Nov 21:49:31.226 * MASTER <-> SLAVE sync: Finished with success
+1:S 24 Nov 21:49:31.227 * Background append only file rewriting started by pid 9
+1:S 24 Nov 21:49:31.303 * AOF rewrite child asks to stop sending diffs.
+9:C 24 Nov 21:49:31.303 * Parent agreed to stop sending diffs. Finalizing AOF...
+9:C 24 Nov 21:49:31.303 * Concatenating 0.00 MB of AOF diff received from parent.
+9:C 24 Nov 21:49:31.303 * SYNC append only file rewrite performed
+9:C 24 Nov 21:49:31.303 * AOF rewrite: 4 MB of memory used by copy-on-write
+1:S 24 Nov 21:49:31.323 * Background AOF rewrite terminated with success
+1:S 24 Nov 21:49:31.323 * Residual parent diff successfully flushed to the rewritten AOF (0.00 MB)
+1:S 24 Nov 21:49:31.323 * Background AOF rewrite finished successfully
+1:S 24 Nov 21:49:32.358 # Connection with master lost.
+1:S 24 Nov 21:49:32.358 * Caching the disconnected master state.
+1:S 24 Nov 21:49:32.439 # Address updated for node 36fd3ac1f51cd5ea40860c3a898100948fe34966, now 172.17.0.57:6379
+1:S 24 Nov 21:49:32.883 # Address updated for node cc1e56910780b3bff6d631891a6ab4d755a9b066, now 172.17.0.54:6379
+1:S 24 Nov 21:49:32.982 * Connecting to MASTER 172.17.0.2:6379
+1:S 24 Nov 21:49:32.983 * MASTER <-> SLAVE sync started
+1:S 24 Nov 21:49:33.335 # Address updated for node c653da9ecc09a7a2f0e4ef9d432c4d33a08306e7, now 172.17.0.58:6379
+1:S 24 Nov 21:49:33.992 * Connecting to MASTER 172.17.0.58:6379
+1:S 24 Nov 21:49:33.992 * MASTER <-> SLAVE sync started
+1:S 24 Nov 21:49:33.992 * Non blocking connect for SYNC fired the event.
+1:S 24 Nov 21:49:33.992 * Master replied to PING, replication can continue...
+1:S 24 Nov 21:49:33.992 * Trying a partial resynchronization (request 6479eb0ccc9d717698ffc896c379c1060b8654a1:98411).
+1:S 24 Nov 21:49:33.997 * Full resync from master: 1b1f2dc1c497f94e5b1aea8e4ad27a26d00e3b69:0
+1:S 24 Nov 21:49:33.997 * Discarding previously cached master state.
+1:S 24 Nov 21:49:34.044 * MASTER <-> SLAVE sync: receiving 195 bytes from master
+1:S 24 Nov 21:49:34.044 * MASTER <-> SLAVE sync: Flushing old data
+1:S 24 Nov 21:49:34.044 * MASTER <-> SLAVE sync: Loading DB in memory
+1:S 24 Nov 21:49:34.045 * MASTER <-> SLAVE sync: Finished with success
+1:S 24 Nov 21:49:34.152 * Background append only file rewriting started by pid 10
+1:S 24 Nov 21:49:34.201 * AOF rewrite child asks to stop sending diffs.
+10:C 24 Nov 21:49:34.201 * Parent agreed to stop sending diffs. Finalizing AOF...
+10:C 24 Nov 21:49:34.201 * Concatenating 0.00 MB of AOF diff received from parent.
+10:C 24 Nov 21:49:34.201 * SYNC append only file rewrite performed
+10:C 24 Nov 21:49:34.201 * AOF rewrite: 4 MB of memory used by copy-on-write
+1:S 24 Nov 21:49:34.254 * Background AOF rewrite terminated with success
+1:S 24 Nov 21:49:34.254 * Residual parent diff successfully flushed to the rewritten AOF (0.00 MB)
+1:S 24 Nov 21:49:34.254 * Background AOF rewrite finished successfully
+1:S 24 Nov 21:49:34.611 # Address updated for node 72b2771ad36db668d2230a3a3190fcdce2e273ba, now 172.17.0.59:6379

@@ -1,0 +1,118 @@
+1:C 24 Nov 00:14:27.450 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 24 Nov 00:14:27.451 # Redis version=4.0.1, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 24 Nov 00:14:27.451 # Configuration loaded
+1:M 24 Nov 00:14:27.453 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1:M 24 Nov 00:14:27.453 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1:M 24 Nov 00:14:27.453 # Current maximum open files is 4096. maxclients has been reduced to 4064 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1:M 24 Nov 00:14:27.453 * No cluster configuration found, I'm 72b2771ad36db668d2230a3a3190fcdce2e273ba
+1:M 24 Nov 00:14:27.466 * Running mode=cluster, port=6379.
+1:M 24 Nov 00:14:27.466 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1:M 24 Nov 00:14:27.466 # Server initialized
+1:M 24 Nov 00:14:27.466 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1:M 24 Nov 00:14:27.466 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1:M 24 Nov 00:14:27.466 * Ready to accept connections
+1:signal-handler (1511486783) Received SIGTERM scheduling shutdown...
+1:M 24 Nov 01:26:23.215 # User requested shutdown...
+1:M 24 Nov 01:26:23.215 * Calling fsync() on the AOF file.
+1:M 24 Nov 01:26:23.249 * Saving the final RDB snapshot before exiting.
+1:M 24 Nov 01:26:23.325 * DB saved on disk
+1:M 24 Nov 01:26:23.325 * Removing the pid file.
+1:M 24 Nov 01:26:23.361 # Redis is now ready to exit, bye bye...
+1:C 24 Nov 01:26:25.102 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 24 Nov 01:26:25.103 # Redis version=4.0.1, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 24 Nov 01:26:25.103 # Configuration loaded
+1:M 24 Nov 01:26:25.103 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1:M 24 Nov 01:26:25.103 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1:M 24 Nov 01:26:25.103 # Current maximum open files is 4096. maxclients has been reduced to 4064 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1:M 24 Nov 01:26:25.118 * Node configuration loaded, I'm 72b2771ad36db668d2230a3a3190fcdce2e273ba
+1:M 24 Nov 01:26:25.139 * Running mode=cluster, port=6379.
+1:M 24 Nov 01:26:25.140 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1:M 24 Nov 01:26:25.140 # Server initialized
+1:M 24 Nov 01:26:25.140 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1:M 24 Nov 01:26:25.140 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1:M 24 Nov 01:26:25.140 * Ready to accept connections
+1:M 24 Nov 02:01:14.924 # configEpoch set to 1 via CLUSTER SET-CONFIG-EPOCH
+1:M 24 Nov 02:01:15.428 # IP address for this node updated to 172.17.0.7
+1:M 24 Nov 02:01:19.832 # Cluster state changed: ok
+1:M 24 Nov 02:01:19.975 * Slave 172.17.0.4:6379 asks for synchronization
+1:M 24 Nov 02:01:19.975 * Partial resynchronization not accepted: Replication ID mismatch (Slave asked for '40a2cee5c0e0b64fe6bb67242db827cf9de090e5', my replication IDs are '8dbbecbbb6fcd7b460217d05597e2d4b9b6fce24' and '0000000000000000000000000000000000000000')
+1:M 24 Nov 02:01:19.975 * Starting BGSAVE for SYNC with target: disk
+1:M 24 Nov 02:01:20.016 * Background saving started by pid 1296
+1296:C 24 Nov 02:01:20.049 * DB saved on disk
+1296:C 24 Nov 02:01:20.050 * RDB: 6 MB of memory used by copy-on-write
+1:M 24 Nov 02:01:20.134 * Background saving terminated with success
+1:M 24 Nov 02:01:20.134 * Synchronization with slave 172.17.0.4:6379 succeeded
+1:M 24 Nov 02:16:21.077 * 1 changes in 900 seconds. Saving...
+1:M 24 Nov 02:16:21.092 * Background saving started by pid 1297
+1297:C 24 Nov 02:16:21.111 * DB saved on disk
+1297:C 24 Nov 02:16:21.111 * RDB: 4 MB of memory used by copy-on-write
+1:M 24 Nov 02:16:21.193 * Background saving terminated with success
+1:M 24 Nov 21:49:27.850 # Address updated for node cc1e56910780b3bff6d631891a6ab4d755a9b066, now 172.17.0.54:6379
+1:M 24 Nov 21:49:29.843 # Connection with slave 172.17.0.4:6379 lost.
+1:M 24 Nov 21:49:29.909 # Address updated for node dd0bfaaebb0a312a41cc2bbcd7aa44f82cade7a4, now 172.17.0.55:6379
+1:M 24 Nov 21:49:31.482 # Address updated for node 49dfba145251cfaf4a64069630d68a82a57e45f3, now 172.17.0.56:6379
+1:M 24 Nov 21:49:32.444 # Address updated for node 36fd3ac1f51cd5ea40860c3a898100948fe34966, now 172.17.0.57:6379
+1:M 24 Nov 21:49:32.486 * Slave 172.17.0.56:6379 asks for synchronization
+1:M 24 Nov 21:49:32.486 * Partial resynchronization not accepted: Replication ID mismatch (Slave asked for '2aee50d9c384bda2170452f7d571a85e68cc5a0d', my replication IDs are '017678228d97e3dd293b1e274887fb2e85a99698' and '0000000000000000000000000000000000000000')
+1:M 24 Nov 21:49:32.486 * Starting BGSAVE for SYNC with target: disk
+1:M 24 Nov 21:49:32.631 * Background saving started by pid 1302
+1302:C 24 Nov 21:49:32.688 * DB saved on disk
+1302:C 24 Nov 21:49:32.688 * RDB: 4 MB of memory used by copy-on-write
+1:M 24 Nov 21:49:32.732 * Background saving terminated with success
+1:M 24 Nov 21:49:32.735 * Synchronization with slave 172.17.0.56:6379 succeeded
+1:signal-handler (1511560173) Received SIGTERM scheduling shutdown...
+1:M 24 Nov 21:49:33.335 # Address updated for node c653da9ecc09a7a2f0e4ef9d432c4d33a08306e7, now 172.17.0.58:6379
+1:M 24 Nov 21:49:33.341 # User requested shutdown...
+1:M 24 Nov 21:49:33.341 * Calling fsync() on the AOF file.
+1:M 24 Nov 21:49:33.341 * Saving the final RDB snapshot before exiting.
+1:M 24 Nov 21:49:33.358 * DB saved on disk
+1:M 24 Nov 21:49:33.358 * Removing the pid file.
+1:M 24 Nov 21:49:33.358 # Redis is now ready to exit, bye bye...
+1:C 24 Nov 21:49:34.599 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 24 Nov 21:49:34.599 # Redis version=4.0.1, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 24 Nov 21:49:34.599 # Configuration loaded
+1:M 24 Nov 21:49:34.600 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1:M 24 Nov 21:49:34.600 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1:M 24 Nov 21:49:34.600 # Current maximum open files is 4096. maxclients has been reduced to 4064 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1:M 24 Nov 21:49:34.601 * Node configuration loaded, I'm 72b2771ad36db668d2230a3a3190fcdce2e273ba
+1:M 24 Nov 21:49:34.609 * Running mode=cluster, port=6379.
+1:M 24 Nov 21:49:34.609 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1:M 24 Nov 21:49:34.609 # Server initialized
+1:M 24 Nov 21:49:34.609 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1:M 24 Nov 21:49:34.609 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1:M 24 Nov 21:49:34.609 * DB loaded from append only file: 0.000 seconds
+1:M 24 Nov 21:49:34.609 * Ready to accept connections
+1:M 24 Nov 21:49:35.510 * Slave 172.17.0.56:6379 asks for synchronization
+1:M 24 Nov 21:49:35.510 * Partial resynchronization not accepted: Replication ID mismatch (Slave asked for '017678228d97e3dd293b1e274887fb2e85a99698', my replication IDs are '4743de55e1b361134c026a598a90105af0cc1a2e' and '0000000000000000000000000000000000000000')
+1:M 24 Nov 21:49:35.527 * Starting BGSAVE for SYNC with target: disk
+1:M 24 Nov 21:49:35.527 * Background saving started by pid 9
+9:C 24 Nov 21:49:35.557 * DB saved on disk
+9:C 24 Nov 21:49:35.557 * RDB: 6 MB of memory used by copy-on-write
+1:M 24 Nov 21:49:35.644 * Background saving terminated with success
+1:M 24 Nov 21:49:35.647 * Synchronization with slave 172.17.0.56:6379 succeeded
+1:M 24 Nov 21:49:36.650 # Cluster state changed: ok
+1:M 24 Nov 21:49:38.565 # Address updated for node c653da9ecc09a7a2f0e4ef9d432c4d33a08306e7, now 172.17.0.58:6379
+1:M 24 Nov 21:50:21.259 # Connection with slave 172.17.0.56:6379 lost.
+1:M 24 Nov 21:50:21.737 * FAIL message received from 36fd3ac1f51cd5ea40860c3a898100948fe34966 about cc1e56910780b3bff6d631891a6ab4d755a9b066
+1:M 24 Nov 21:50:24.830 * Marking node dd0bfaaebb0a312a41cc2bbcd7aa44f82cade7a4 as failing (quorum reached).
+1:C 25 Nov 02:36:42.604 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+1:C 25 Nov 02:36:42.606 # Redis version=4.0.1, bits=64, commit=00000000, modified=0, pid=1, just started
+1:C 25 Nov 02:36:42.606 # Configuration loaded
+1:M 25 Nov 02:36:42.607 # You requested maxclients of 10000 requiring at least 10032 max file descriptors.
+1:M 25 Nov 02:36:42.607 # Server can't set maximum open files to 10032 because of OS error: Operation not permitted.
+1:M 25 Nov 02:36:42.607 # Current maximum open files is 4096. maxclients has been reduced to 4064 to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+1:M 25 Nov 02:36:42.613 * Node configuration loaded, I'm 72b2771ad36db668d2230a3a3190fcdce2e273ba
+1:M 25 Nov 02:36:42.614 * Running mode=cluster, port=6379.
+1:M 25 Nov 02:36:42.614 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+1:M 25 Nov 02:36:42.614 # Server initialized
+1:M 25 Nov 02:36:42.614 # WARNING overcommit_memory is set to 0! Background save may fail under low memory condition. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+1:M 25 Nov 02:36:42.614 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+1:M 25 Nov 02:36:42.614 * DB loaded from append only file: 0.000 seconds
+1:M 25 Nov 02:36:42.614 * Ready to accept connections
+1:M 25 Nov 02:36:44.637 # Cluster state changed: ok
+1:M 25 Nov 02:36:47.666 # Cluster state changed: fail
+1:M 25 Nov 02:51:43.042 * 1 changes in 900 seconds. Saving...
+1:M 25 Nov 02:51:43.044 * Background saving started by pid 11
+11:C 25 Nov 02:51:43.157 * DB saved on disk
+11:C 25 Nov 02:51:43.158 * RDB: 6 MB of memory used by copy-on-write
+1:M 25 Nov 02:51:43.246 * Background saving terminated with success
