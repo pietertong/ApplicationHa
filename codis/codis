@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+CODIS_ROOT_CMD="${BASH_SOURCE-$0}"
+CODIS_ROOT="$(dirname "${CODIS_ROOT_CMD}")"
+CODIS_ROOT_DIR="$(cd "${CODIS_ROOT}"; pwd)"
+CODIS_ROOT_DIR_ADMIN="${CODIS_ROOT_DIR}/admin"
+
+hostip=`ifconfig eth0 | grep "inet " | awk -F " " '{print $2}'`
+
+if [ "x$hostip" == "x" ]; then
+    echo "cann't resolve host ip address"
+    exit 1
+fi
+
+[ ! -d "${CODIS_ROOT_DIR}/log" ] && mkdir -p "${CODIS_ROOT_DIR}/log"
+
+function opeartion()
+{
+    [ "" == "$2" ] && $2=""
+    echo -e "CODIS zookeeper CONTROLLER CENTER\n"
+    /bin/bash "${CODIS_ROOT_DIR_ADMIN}/codis-zookeeper-admin.sh" start
+    sleep 5
+    if [ "" != "$1" ];then
+        echo -e "$2 CODIS dashboard CONTROLLER CENTER\n"
+        /bin/bash "${CODIS_ROOT_DIR_ADMIN}/codis-dashboard-admin.sh" $1
+        sleep 5
+        echo -e "$2 CODIS proxy CONTROLLER CENTER\n"
+        /bin/bash "${CODIS_ROOT_DIR_ADMIN}/codis-proxy-admin.sh" $1
+        sleep 5
+        echo -e "$2 CODIS server CONTROLLER CENTER\n"
+        sleep 5
+        echo -e "$2 CODIS fe web CONTROLLER CENTER\n"
+        /bin/bash "${CODIS_ROOT_DIR_ADMIN}/codis-fe-admin.sh" $1
+        sleep 5
+   fi
+}
+# ps aux|grep codis|grep 'codis_safe'|awk -F ' ' '{print$2}'|xargs kill -9
+#bin/codis-admin --remove-lock --product=codis_safe  --zookeeper=0.0.0.0:2181
+case $1 in
+    start)
+        TIPIS='STARTING'
+        opeartion $1 $TIPIS
+       ;;
+    daemon)
+        TIPIS='FOREGROUND START'
+        opeartion $1
+       ;;
+    stop)
+        opeartion $1
+       ;;
+    kill)
+        opeartion $1
+       ;;
+    restart)
+        opeartion $1
+       ;;
+    cleanup)
+        opeartion $1
+       ;;
+    *)
+        echo -e "\nUsage: $0 { start | foregound | stop | kill | restart | cleanup }\n" >&2
+esac
+
